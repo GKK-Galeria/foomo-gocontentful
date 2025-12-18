@@ -2539,7 +2539,7 @@ func updateCacheForContentTypeAndEntity(ctx context.Context, cc *ContentfulClien
 		}
 
 	}
-	allTags, err := cc.getAllTags(ctx, false)
+	allTags, err := cc.getAllTags(ctx, true)
 	if err != nil {
 		return fmt.Errorf("syncCache failed for tags: %s, clientMode: %s", err.Error(), cc.clientMode)
 	}
