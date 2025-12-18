@@ -1,9 +1,12 @@
-[![Build Status](https://github.com/foomo/gocontentful/actions/workflows/test.yml/badge.svg?branch=main&event=push)](https://github.com/foomo/gocontentful/actions/workflows/pr.yml)
+[![GitHub Release](https://img.shields.io/github/release/foomo/gocontentful.svg?style=flat-square)](https://github.com/foomo/gocontentful/releases)
+[![Github All Releases](https://img.shields.io/github/downloads/foomo/gocontentful/total.svg?style=flat-square)](https://github.com/foomo/gocontentful/releases)
+[![Docker Pulls](https://img.shields.io/docker/pulls/foomo/gocontentful?style=flat-square)](https://hub.docker.com/r/foomo/gocontentful)
+[![GitHub stars](https://img.shields.io/github/stars/foomo/gocontentful.svg?style=flat-square)](https://github.com/foomo/gocontentful)
 [![Go Report Card](https://goreportcard.com/badge/github.com/foomo/gocontentful)](https://goreportcard.com/report/github.com/foomo/gocontentful)
 [![GoDoc](https://godoc.org/github.com/foomo/gocontentful?status.svg)](https://godoc.org/github.com/foomo/gocontentful)
 
 <p align="center">
-  <img alt="sesamy" src=".github/assets/gocontentful.png"/>
+  <img alt="foomo/gocontentful" src="docs/public/logo.png" width="400" height="400"/>
 </p>
 
 # Gocontentful
@@ -57,10 +60,12 @@ Read the documentation: [Getting Started](docs/00-gettingstarted.md)
 
 ## How to Contribute
 
-Make a pull request...
+Contributions are welcome! Please read the [contributing guide](docs/CONTRIBUTING.md).
+
+![Contributors](https://contributors-table.vercel.app/image?repo=foomo/gocontentful&width=50&columns=15)
 
 ## License
 
-Distributed under MIT License, please see license file within the code for more details.
+Distributed under MIT License, please see the [license](LICENSE) file for more details.
 
 _Made with ♥ [foomo](https://www.foomo.org) by [bestbytes](https://www.bestbytes.com)_
