@@ -68,23 +68,23 @@ func TestTheAPI(t *testing.T) {
 	// testLogger.Info(tags)
 }
 
-//func TestReadExport(t *testing.T) {
+// func TestReadExport(t *testing.T) {
 //	fileBytes, err := ioutil.ReadFile("./test/test-space-export.json")
 //	require.NoError(t, err)
 //	var export erm.ExportFile
 //	err = json.Unmarshal(fileBytes, &export)
 //	require.NoError(t, err)
 //	fmt.Println(export)
-//}
+// }
 //
-//func TestLiveSpaceIsStillWorking(t *testing.T) {
+// func TestLiveSpaceIsStillWorking(t *testing.T) {
 //	testLogger := logrus.StandardLogger()
 //	cc, err := testapi.NewContentfulClient("v0ro6q5qmdu8", testapi.ClientModeCDA, "PHvA-6ExNXvYvIIP-p255KWfZhu2eM2OrKHa3nhHSB4", 100, test.GetContenfulLogger(testLogger), test.LogDebug, true)
 //	require.NoError(t, err)
 //	prods, err := cc.GetAllProduct()
 //	require.NoError(t, err)
 //	testLogger.WithField("prods", len(prods)).Info("Loaded live products")
-//}
+// }
 
 func TestCleanInvisibles(t *testing.T) {
 	invisibleChars := "\u0009D\u200bougl\u2028as Finn"
