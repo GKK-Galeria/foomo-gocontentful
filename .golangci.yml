@@ -17,6 +17,7 @@ linters:
     - testpackage
     - paralleltest
     - nakedret
+    - modernize
     - goconst
     - wsl_v5
     # Discouraged linters
