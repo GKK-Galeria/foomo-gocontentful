@@ -35,8 +35,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-golangci-lint-
 
+      - name: Run tidy
+        run: |
+          make lint
+          git diff --exit-code
+
       - name: Run lint
         run: make lint
 
       - name: Run tests
-        run: make test
+        run: |
+          make test
+          git diff --exit-code

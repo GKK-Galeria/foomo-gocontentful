@@ -828,6 +828,11 @@ func (cc *ContentfulClient) cacheBrandByID(ctx context.Context, id string, entry
 	if entryPayload != nil {
 		col = &contentful.Collection[CfBrand]{}
 		id = entryPayload.Sys.ID
+		var vo CfBrand
+		if err := contentful.DeepCopy(&vo, entryPayload); err != nil {
+			return errors.New("failed to deep copy: " + err.Error())
+		}
+		col.Items = append(col.Items, vo)
 	} else {
 		if cc.Client == nil {
 			return errors.New("cacheBrandByID: No client available")
@@ -840,10 +845,13 @@ func (cc *ContentfulClient) cacheBrandByID(ctx context.Context, id string, entry
 			if err != nil {
 				return err
 			}
+			if len(col.Items) == 0 {
+				entryDelete = true
+			}
 		}
 	}
 	// It was deleted
-	if col != nil && len(col.Items) == 0 || entryDelete {
+	if entryDelete {
 		delete(cc.Cache.genericEntries, id)
 		delete(cc.Cache.entryMaps.brand, id)
 		delete(cc.Cache.idContentTypeMap, id)
